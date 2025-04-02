@@ -1,0 +1,186 @@
+
+/* LIGHT THEME */
+body.light {
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+body.light .topbar {
+  background-color: #ddd;
+}
+
+body.light .controls button,
+body.light .controls select,
+body.light #dealButton,
+body.light .offer-box,
+body.light .offer-box p {
+  background-color: white;
+  color: black;
+}
+
+body.light .case {
+  background: #ffe680;
+  color: black;
+}
+
+body.light .case.opened {
+  background: #ccc;
+  color: #000;
+}
+
+body.light .money-amount {
+  color: darkgreen;
+}
+
+body.light .money-crossed {
+  color: darkred !important;
+}
+
+body.light #banker-call {
+  background-color: white;
+  color: green;
+  border-color: green;
+}
+
+/* NEON THEME */
+body.neon {
+  background-color: #000;
+  color: #0ff;
+}
+
+body.neon .topbar {
+  background-color: #111;
+}
+
+body.neon .controls button,
+body.neon .controls select,
+body.neon #dealButton,
+body.neon .offer-box {
+  background-color: #111;
+  color: #0ff;
+  border: 2px solid #0ff;
+}
+
+body.neon .case {
+  background: #1f1f1f;
+  color: #0ff;
+  box-shadow: 0 0 10px #0ff;
+}
+
+body.neon .case.opened {
+  background: #333;
+  color: #ff0;
+}
+
+body.neon .money-amount {
+  color: #0ff;
+}
+
+body.neon .money-crossed {
+  color: #f0f !important;
+}
+
+body.neon #banker-call {
+  background-color: #0ff;
+  color: black;
+  border-color: #0ff;
+}
+
+/* CHRISTMAS THEME */
+body.christmas {
+  background-color: #004225;
+  color: #fff;
+}
+
+body.christmas .topbar {
+  background-color: #007a33;
+}
+
+body.christmas .case {
+  background: #e60000;
+  color: white;
+  border: 2px solid white;
+}
+
+body.christmas .case.opened {
+  background: #660000;
+}
+
+body.christmas .money-amount {
+  color: #00ff00;
+}
+
+body.christress .money-crossed {
+  color: #ff0000 !important;
+}
+
+body.christmas .offer-box {
+  background: #fff;
+  color: #007a33;
+}
+
+/* HALLOWEEN THEME */
+body.halloween {
+  background-color: #1e0f00;
+  color: #ff7518;
+}
+
+body.halloween .topbar {
+  background-color: #331100;
+}
+
+body.halloween .case {
+  background: #ff7518;
+  color: black;
+}
+
+body.halloween .case.opened {
+  background: #330000;
+  color: orange;
+}
+
+body.halloween .money-amount {
+  color: #ff7518;
+}
+
+body.halloween .money-crossed {
+  color: #660000 !important;
+}
+
+body.halloween .offer-box {
+  background: #331100;
+  color: orange;
+}
+
+/* ST. PATRICK'S DAY THEME */
+body.stpatricks {
+  background-color: #006400;
+  color: #ffffff;
+}
+
+body.stpatricks .topbar {
+  background-color: #004d00;
+}
+
+body.stpatricks .case {
+  background: #00cc44;
+  color: white;
+}
+
+body.stpatricks .case.opened {
+  background: #002200;
+  color: #ccffcc;
+}
+
+body.stpatricks .money-amount {
+  color: #33ff77;
+}
+
+body.stpatricks .money-crossed {
+  color: #cc0000 !important;
+}
+
+body.stpatricks .offer-box {
+  background: #ffffff;
+  color: #006400;
+}

@@ -1,0 +1,308 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #222;
+}
+
+h1 {
+  margin: 10px;
+}
+
+/* Controls and hamburger */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.controls button,
+.controls select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Game layout */
+#wallet {
+  font-size: 20px;
+  margin: 10px;
+}
+
+#cases {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.case {
+  width: 80px;
+  height: 80px;
+  background: gold;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+.case.opened {
+  background: #444;
+  color: white;
+}
+
+#moneyBoard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+}
+
+#info {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#dealButton {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Amount indicators */
+.money-amount {
+  color: limegreen;
+  transition: color 0.3s;
+  padding: 6px 12px;
+  border: 2px solid limegreen;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+
+.money-crossed {
+  color: red !important;
+  border: 2px solid red;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+
+/* Banker call animation */
+/* Phone icon animation */
+#banker-call {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  background: black;
+  color: lime;
+  font-weight: bold;
+  border: 2px solid lime;
+  border-radius: 8px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.4s ease;
+  z-index: 10000;
+  animation: phoneGlow 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes phoneGlow {
+  from {
+    box-shadow: 0 0 10px lime;
+    transform: scale(1);
+  }
+
+  to {
+    box-shadow: 0 0 20px lime;
+    transform: scale(1.05);
+  }
+}
+
+/* Modal background drama */
+.offer-modal {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/* Case shuffle and reveal effects */
+.case.shuffling {
+  animation: shuffleFlash 0.3s ease-in-out;
+}
+
+@keyframes shuffleFlash {
+  0% {
+    background: gold;
+    transform: scale(1);
+  }
+
+  50% {
+    background: white;
+    transform: scale(1.1);
+  }
+
+  100% {
+    background: gold;
+    transform: scale(1);
+  }
+}
+
+.case.revealing {
+  animation: revealFlip 0.3s ease-in-out;
+}
+
+@keyframes revealFlip {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .controls {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    background-color: #222;
+  }
+
+  .controls.show {
+    display: flex;
+  }
+
+  .controls button,
+  .controls select {
+    width: 90%;
+    font-size: 16px;
+    margin: 5px auto;
+  }
+
+  #wallet {
+    font-size: 18px;
+  }
+
+  .case {
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+  }
+
+  #dealButton {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  #moneyBoard {
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  #info p {
+    font-size: 16px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+.offer-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.offer-box {
+  background: #111;
+  padding: 30px 40px;
+  border: 2px solid white;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 90%;
+  width: 300px;
+}
+
+.offer-box p {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.offer-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#acceptOffer {
+  background: white;
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#rejectOffer {
+  background: red;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}

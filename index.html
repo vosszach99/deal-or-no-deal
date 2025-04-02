@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deal or No Deal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="themes.css">
+  <link rel="stylesheet" href="sprinkles.css">
+</head>
+
+<body>
+  <div class="topbar">
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="controls">
+      <button id="resetBtn">Reset Game</button>
+      <select id="themeSelect">
+        <option value="default">🎮 Default</option>
+        <option value="light">☀️ Light</option>
+        <option value="neon">💡 Neon</option>
+        <option value="christmas">🎄 Christmas</option>
+        <option value="halloween">🎃 Halloween</option>
+        <option value="stpatricks">☘️ St. Patrick's Day</option>
+      </select>
+
+      <select id="difficulty">
+        <option value="normal">Normal</option>
+        <option value="easy">Easy</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+    <h1>Deal or No Deal Deluxe</h1>
+  </div>
+
+  <div id="wallet">Wallet: $10000</div>
+  <div id="game">
+    <div id="moneyBoard"></div>
+    <div id="cases"></div>
+  </div>
+  <div id="info">
+    <p id="status">Choose your case.</p>
+    <p id="offer"></p>
+    <button id="dealButton" disabled>☎️</button>
+  </div>
+  <div id="offerModal" class="offer-modal">
+    <div class="offer-box">
+      <p id="offerAmount">Banker offers you: $0</p>
+      <div class="offer-buttons">
+        <button id="acceptOffer">DEAL</button>
+        <button id="rejectOffer">NO DEAL</button>
+      </div>
+    </div>
+  </div>
+  <audio id="bgMusic" src="sounds/bg_music.mp3" preload="auto"></audio>
+  <audio id="openSound" src="sounds/case-open.mp3" preload="auto"></audio>
+  <audio id="dealSound" src="sounds/deal.mp3" preload="auto"></audio>
+  <audio id="revealSound" src="sounds/reveal.mp3" preload="auto"></audio>
+  <audio id="bankerCall" src="sounds/banker-calling.mp3" preload="auto"></audio>
+  <audio id="takeDeal" src="sounds/take-the-deal.mp3" preload="auto"></audio>
+  <audio id="beforePick" src="sounds/pick-case.mp3" preload="auto"></audio>
+  <audio id="beforeOffer" src="sounds/before-offer.mp3" preload="auto"></audio>
+  <audio id="hitSound" src="sounds/hit-sound-effect.mp3" preload="auto"></audio>
+  <audio id="chooseCaseSound" src="sounds/choose-your-case.mp3" preload="auto"></audio>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.controls');
+      menu.classList.toggle('show');
+    }
+  </script>
+</body>
+
+</html>

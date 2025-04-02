@@ -1,0 +1,41 @@
+
+/* Universal sprinkle setup */
+.sprinkle {
+  position: fixed;
+  top: -50px;
+  font-size: 24px;
+  animation: fall linear;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* Default and Light: 💵 */
+body.default .sprinkle,
+body.light .sprinkle {
+  color: #00ff00;
+}
+
+/* Christmas: 💵 + 🎁 */
+body.christmas .sprinkle {
+  color: #e60000;
+}
+
+/* Neon: 💵 + 🧊 */
+body.neon .sprinkle {
+  color: #0ff;
+}
+
+/* Halloween: 💵 + 🍬 */
+body.halloween .sprinkle {
+  color: orange;
+}
+
+/* St. Patrick's Day: 💵 + ☘️ */
+body.stpatricks .sprinkle {
+  color: #33ff77;
+}
